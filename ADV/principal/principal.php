@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Advent International</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="ruta/logo.png">
+  <style>
+    .rotate {
+      transform: rotate(90deg);
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-800">
+
+  <!-- Header con menú responsive -->
+  <header class="bg-blue-700 text-white">
+    <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
+      <!-- Logo + Título -->
+      <div class="flex items-center gap-3">
+        <img src="../imagenes/logo-adv.png" alt="Logo Advent" class="w-12 h-12 rounded-full">
+        <h1 class="text-xl font-bold">Advent International Colombia S A S</h1>
+      </div>
+
+      <!-- Botón hamburguesa -->
+      <button id="menu-btn" class="md:hidden focus:outline-none">
+        <svg id="menu-icon" class="w-8 h-8 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16" />
+      </button>
+
+      <!-- Menú para pantallas grandes -->
+      <nav class="hidden md:flex gap-6">
+        <a href="#inicio" class="hover:underline">Inicio</a>
+        <a href="#nosotros" class="hover:underline">Nosotros</a>
+        <a href="#instrucciones" class="hover:underline">Instrucciones</a>
+        <a href="#gerentes" class="hover:underline">Gerentes</a>
+        <a href="#galeria" class="hover:underline">Galería</a>
+        <a href="#contacto" class="hover:underline">Contacto</a>
+      </nav>
+    </div>
+
+    <!-- Menú móvil -->
+    <div id="mobile-menu" class="md:hidden hidden flex flex-col bg-blue-600 text-white px-6 pb-4 transition-all duration-300 ease-in-out">
+      <a href="#inicio" class="block py-2 border-b border-white">Inicio</a>
+      <a href="#nosotros" class="block py-2 border-b border-white">Nosotros</a>
+      <a href="#instrucciones" class="block py-2 border-b border-white">Instrucciones</a>
+      <a href="#gerentes" class="block py-2 border-b border-white">Gerentes</a>
+      <a href="#galeria" class="block py-2 border-b border-white">Galería</a>
+      <a href="#contacto" class="block py-2">Contacto</a>
+    </div>
+  </header>
+
+  <!-- Inicio -->
+  <section id="inicio" class="bg-blue-100 text-center py-16 px-4">
+    <h2 class="text-4xl font-bold mb-4 text-blue-800">Bienvenido a Advent International</h2>
+    <p class="text-lg max-w-2xl mx-auto">Explora nuestra empresa, conoce a nuestro equipo y aprende cómo usar nuestra aplicación.</p>
+  </section>
+
+  <!-- Nosotros -->
+  <section id="nosotros" class="py-16 bg-white">
+    <div class="max-w-5xl mx-auto px-6">
+      <h2 class="text-3xl font-bold text-blue-700 mb-4">Sobre Nosotros</h2>
+      <p class="text-gray-700 text-lg leading-relaxed mb-8">Advent International es una compañía dedicada al desarrollo e innovación tecnológica. Nuestro enfoque está en crear soluciones eficientes y modernas para empresas de todos los tamaños.</p>
+        <img src="../imagenes/sobreADV.jpg" alt="Foto empresa" class="rounded-xl shadow-lg mt-4 w-full max-h-96 object-cover">
+    </div>
+    <a href="../sobre_nosotros/perfil_empresa.php" class="inline-block px-6 py-3 bg-blue-700 text-white rounded-full font-semibold shadow hover:bg-blue-800 transition duration-300">
+  Saber más
+</a>
+
+  </section>
+
+  <!-- Instrucciones -->
+  <section id="instrucciones" class="bg-blue-50 py-12 px-6">
+    <div class="max-w-6xl mx-auto">
+      <h3 class="text-3xl font-bold text-blue-700 mb-6">Cómo Usar Nuestra Aplicación</h3>
+      <p class="mb-4 text-gray-700">Visualiza o descarga el manual paso a paso en el siguiente visor PDF:</p>
+      <iframe src="ruta/instrucciones.pdf" class="w-full h-96 rounded shadow" frameborder="0"></iframe>
+    </div>
+  </section>
+
+  <!-- Gerentes -->
+  <section id="gerentes" class="max-w-6xl mx-auto py-12 px-6">
+    <h3 class="text-3xl font-bold text-blue-700 mb-8">Nuestro Equipo</h3>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+      <div class="bg-white rounded-xl shadow-lg p-4 text-center">
+        <img src="../imagenes/Ugo-Posada-1.jpg" class="w-28 h-28 rounded-full mx-auto mb-4" alt="Gerente 1">
+        <h4 class="text-xl font-semibold text-blue-800">Ugo Posada</h4>
+        <p class="text-gray-600">Director General</p>
+      </div>
+      <div class="bg-white rounded-xl shadow-lg p-4 text-center">
+        <img src="ruta/gerente2.jpg" class="w-28 h-28 rounded-full mx-auto mb-4" alt="Gerente 2">
+        <h4 class="text-xl font-semibold text-blue-800">Laura Gómez</h4>
+        <p class="text-gray-600">Directora de Tecnología</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Galería -->
+  <section id="galeria" class="bg-blue-100 py-12 px-6">
+    <div class="max-w-6xl mx-auto">
+      <h3 class="text-3xl font-bold text-blue-700 mb-8">Galería de la Empresa</h3>
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+        <img src="ruta/foto1.jpg" alt="Galería 1" class="rounded shadow">
+        <img src="ruta/foto2.jpg" alt="Galería 2" class="rounded shadow">
+        <img src="ruta/foto3.jpg" alt="Galería 3" class="rounded shadow">
+      </div>
+    </div>
+  </section>
+
+  <!-- Contacto -->
+  <section id="contacto" class="max-w-6xl mx-auto py-12 px-6">
+    <h3 class="text-3xl font-bold text-blue-700 mb-6">Contáctanos</h3>
+    <p class="mb-2">📧 Correo: contacto@advent.com</p>
+    <p class="mb-2">📞 Teléfono: +57 301 000 0000</p>
+    <p class="mb-2">📍 Dirección: Cra 00 #00-00, Ciudad</p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-blue-700 text-white py-6 text-center mt-10">
+    <p>&copy; 2025 Advent International. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- Script del menú hamburguesa -->
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const menuIcon = document.getElementById('menu-icon');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+      // Animar icono: cambiar entre ☰ y ✖
+      if (menuIcon.innerHTML.includes('M4 6h16')) {
+        menuIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />';
+      } else {
+        menuIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />';
+      }
+    });
+
+    // Cerrar menú al hacer clic en opción
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        menuIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />';
+      });
+    });
+  </script>
+
+</body>
+</html>
